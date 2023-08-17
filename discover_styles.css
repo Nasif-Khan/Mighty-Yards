@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.main{
+    background-color: #090807;
+    color: #fff;
+    text-align: center;
+    /* padding-top: 25px; */
+
+}
+.sub{
+    background-color: #333333;
+}
+
+.main h1{
+    padding: 25px 0;
+}
+.image{
+    width: 25%;
+    margin: 10px;
+}

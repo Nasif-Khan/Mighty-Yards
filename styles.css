@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.home{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0,0,0,0.75)),url(images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.logo{
+    width: 95px;
+    height: 95px;
+    /* margin: 20px; */
+    cursor: pointer;
+    float: left;
+}
+
+.navbar{
+    width: 85%;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    right: 100px;
+    z-index: 10;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+.navbar ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#fff;
+}
+
+.content h1{
+    font-size: 70px;
+    padding: 0px 200px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;    
+    overflow: hidden;
+}
+
+.content span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  } 
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+.about{
+    width: 100%;
+    height: 100vh; 
+    background-color: #090807;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+}
+
+.projects{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(0, 0, 0),rgba(255, 255, 255, 0)),url(images/projects/project1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size:xx-large;
+}
+
+.projects h2{
+    
+    padding-top: 7%;
+    padding-left: 7%;
+    font-weight: 100;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: #009688;
+}
+
+.text{
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 2%;
+    font-size: large;
+    font-weight: 100;
+    text-align: justify;
+    margin-right: 60%;
+}
+.btn{
+    width: 100%;
+    /* position: absolute; */
+    top: 50%;
+    transform: translateX(30%);
+    text-align: center;
+    color: #555555;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.contact{
+    width: 100%;
+    padding-left: 2%;
+    background-color: #000;
+    color: #551a8b;
+}
+
+.about h1{
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 7%;
+    color: #fff;
+    text-decoration: wavy #009688;
+}
+.collab{
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    box-shadow: 5px 10px #009688;
+}
+
+.x{
+    width: 100px;
+    height: 100px;
+    box-shadow: none;
+}
+
+
+
+
+
+
+@media (max-width: 1030px){
+    .navbar{
+        width: 100%;
+        right: 0;
+    }
+    .content h1{
+        font-size: 50px;
+        padding: 0px 100px;
+    }
+    .collab{
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+        box-shadow: 5px 10px #009688;
+    }
+    .x{
+        width: 75px;
+        height: 75px;
+        box-shadow: none;
+    }
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .about{
+        height: 70vh;
+    }
+
+}
+
+@media (max-width: 530px){
+    .navbar{
+        width: 100%;
+        right: 0;
+    }
+    .content{
+        width: 100%;
+        
+    }
+    .content h1{
+        font-size: 30px;
+        padding: 0px 50px;
+    }
+    .about{
+        width: 100%;
+        height: 105vh;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .collab{
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;
+        box-shadow: 5px 10px #009688;
+    }
+    .x{
+        width: 50px;
+        height: 50px;
+        box-shadow: none;
+    }
+
+}
